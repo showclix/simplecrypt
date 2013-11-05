@@ -1,0 +1,28 @@
+{
+  "name": "simplecrypt",
+  "version": "0.0.1",
+  "description": "Very basic library for encrypting/decrypting strings without the boilerplate of the crypt library.",
+  "main": "lib/simplecrypt.js",
+  "directories": {
+    "example": "examples",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShowClix/simplecrypt"
+  },
+  "keywords": [
+    "encryption",
+    "crypt",
+    "strings",
+    "cipher"
+  ],
+  "author": "me@nategood.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ShowClix/simplecrypt/issues"
+  }
+}
