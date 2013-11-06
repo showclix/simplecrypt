@@ -1,7 +1,7 @@
 {
   "name": "simplecrypt",
-  "version": "0.0.2",
-  "description": "Very basic library for encrypting/decrypting strings without the boilerplate of the crypt library.",
+  "version": "0.1.0",
+  "description": "Simple library for encrypting/decrypting strings without the boilerplate of the crypt library.",
   "main": "lib/simplecrypt.js",
   "directories": {
     "example": "examples",
@@ -16,9 +16,12 @@
   },
   "keywords": [
     "encryption",
+    "decryption",
     "crypt",
+    "cryptography",
+    "cipher",
     "strings",
-    "cipher"
+    "passwords"
   ],
   "author": "me@nategood.com",
   "license": "MIT",

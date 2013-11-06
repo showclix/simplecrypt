@@ -28,5 +28,25 @@ describe('simplecrypt', function() {
                 assert.equal(sc.decrypt(digest), message);
             });
         });
+
+        describe('password', function() {
+            it('should encrypt/decrypt with a user defined password', function() {
+                var pw = 'a user defined password';
+                var sc = simplecrypt({password: pw});
+                var digest = sc.encrypt(message);
+                assert.equal(sc.decrypt(digest), message);
+                assert.equal(sc.password(), pw);
+            });
+        });
+
+        describe('salt', function() {
+            it('should encrypt/decrypt with a user defined salt', function() {
+                var salt = 'mMmMMMmmm s@ltY!';
+                var sc = simplecrypt({salt: salt});
+                var digest = sc.encrypt(message);
+                assert.equal(sc.decrypt(digest), message);
+                assert.equal(sc.salt(), salt);
+            });
+        });
     });
 });

@@ -31,3 +31,39 @@ console.log(digest); // "66cea6eb1c18b8862485cf0604fa6062"
 var message = sc.decrypt(digest);
 console.log(message); // "my secret"
 ```
+
+## API
+
+### simplecrypt([opts])
+
+Instantiates a new simplecrypt object.
+
+opts
+
+Optionally specify options to override default settings.
+
+ - password: (string) password for encryption. defaults to large, cryptographically strong, random password.
+ - salt: (string) salt to add to the message.  defaults to a random salt.
+ - method: (string) the cipher to use.  defaults to aes192.
+ - encoding: (string) encoding of the message. defaults to utf8.
+ - digestEncoding: (string) encoding of the encrypted message. defaults to hex.
+
+returns instance of the simplecrypt library
+
+### .encrypt(message)
+
+message: (string) message to encrypt
+returns (string) encrypted message as hex string
+
+### .decrypt(digest)
+
+digest: (string) encrypted message
+returns (string) original message, unencrypted
+
+### .password()
+
+returns (string|Buffer) password used for encryption
+
+### .salt()
+
+returns (string) salt used
